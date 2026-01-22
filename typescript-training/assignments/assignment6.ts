@@ -5,6 +5,9 @@ function isprime(num:number):boolean{
     if(num===2){
         return false;
     }
+    if(num%2===0){
+        return false;
+    }
 
     const sqrt=Math.sqrt(num);
     for(let i:number=3;i<=Math.sqrt(num);i+=2){
@@ -15,9 +18,14 @@ function isprime(num:number):boolean{
     return true;
 }
 
-let numberToCheck:number=2;
+
+let numberToCheck:number=11
 if(isprime(numberToCheck)){
     console.log(`${numberToCheck} is a prime number.`);
 }else{
     console.log(`${numberToCheck} is not a prime number.`);
 }
+
+
+console.log(isprime(10)); // Output: false
+console.log(isprime(17));
